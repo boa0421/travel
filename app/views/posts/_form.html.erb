@@ -1,35 +1,42 @@
 <%= form_with(model: post, local: true) do |f| %>
 
   <div class="form-group">
-    <%= f.label :content, 'タイトル' %>
-    <%= f.text_field :content %>
+    <%= f.label :title, 'タイトル' %>
+    <%= f.text_field :title %>
   </div>
   
-    <div class="form-group">
-    <%= f.label :content, '行った国' %>
-    <%= f.text_field :content %>
+  <div class="form-group">
+    <%= f.label :area, 'エリア' %>
+    <%= f.text_field :area %>
   </div>
   
-    <div class="form-group">
-    <%= f.label :content, '写真スポット' %>
-    <%= f.text_field :content %>
+  <div class="form-group">
+    <%= f.label :country, '行った国' %>
+    <%= f.text_field :country %>
   </div>
   
-    <div class="form-group">
-    <%= f.label :content, '出発日' %>
-    <%= f.text_field :date %>
-    <%= f.label :content, '〜' %>
-    <%= f.text_field :content %>
+  <div class="form-group">
+    <%= f.label :spot, '撮影スポット' %>
+    <%= f.text_field :spot %>
   </div>
   
-  <div class="field">
+
+    <div class="field">
     <%= f.label :image %>
     <%= f.file_field :image %>
   </div>
+
+  
+  <!--  <div class="form-group">-->
+  <!--  <%= f.label :first_day, '出発日' %>-->
+  <!--  <%= f.text_field :first_day %>-->
+  <!--  <%= f.label :last_day, '〜' %>-->
+  <!--  <%= f.text_field :last_day %>-->
+  <!--</div>-->
   
     <div class="form-group">
-    <%= f.label :content, '日記' %>
-    <%= f.text_field :text %>
+    <%= f.label :comment, '日記' %>
+    <%= f.text_field :comment %>
   </div>
   
 

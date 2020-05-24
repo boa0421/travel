@@ -1,0 +1,29 @@
+
+<ul class="list-unstyled">
+  <% posts.each do |post| %>
+
+      <div class="media-body">
+        <div>
+          <%= link_to post.user.name, user_path(post.user) %>
+        </div>
+        <div>
+          <p class="mb-0"><%= post.title %></p>
+          <p><%= post.created_at %></p>
+          <p><%= post.area %></p>
+          <p><%= post.country %></p>
+          <p><%= post.spot %></p>
+          <p><%= post.comment %></p>
+        </div>
+        <div>
+          <% if current_user == post.user %>
+            <%= link_to "Delete", post, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-sm' %>
+          <% end %>
+        </div>
+      </div>
+    </li>
+  <% end %>
+
+
+  
+  <%= link_to 'トップページに戻る', root_path %>
+</ul>

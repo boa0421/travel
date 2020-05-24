@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-  before_action :require_user_logged_in, only: [:create, :edit, :destroy]
-  before_action :correct_user, only: [:create, :edit, :destroy]
+  before_action :require_user_logged_in, only: [:edit, :destroy]
+  before_action :correct_user, only: [:edit, :destroy]
   
   def index
     @posts = current_user.posts.order(id: :desc).page(params[:page])
@@ -22,7 +22,7 @@ class PostsController < ApplicationController
     else
       @posts = current_user.posts.order(id: :desc).page(params[:page])
       flash.now[:denger] = '投稿できませんでした'
-      render new
+      render :new
     end
   end
   

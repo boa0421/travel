@@ -1,5 +1,13 @@
 <p><%= @post.title %></p>
 
+<p><%= @post.area %></p>
+
+<p><%= @post.country %></p>
+
+<p><%= @post.spot %></p>
+
+<p><%= @post.comment %></p>
+
 <p>
   <strong>Image:</strong>
   <%= image_tag @post.image.url if @post.image? %>
